@@ -1,0 +1,148 @@
+@import "base";
+@import "header";
+.admin {
+  padding-top: 150px;
+}
+.admin-btn {
+  box-shadow: 3px 10px 10px 0 rgba(black, 0.3);
+}
+._a {
+  margin: 0px 30px 30px 30px;
+}
+section.admin-btn a {
+  padding: 10px 0px;
+  font-size: 40px;
+}
+button.admin-btn {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.admin-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 22px 44px 0 rgba(#fff, 0.3);
+  text-shadow: 1px -1px 0 #fff;
+  transition: 1s;
+}
+table {
+  border-spacing: 0 10px;
+  width: 100%;
+}
+tbody {
+  background-color: $bg-collor;
+}
+th {
+  padding: 10px 20px;
+  font-family: "Mr De Haviland", cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  background: #56433d;
+  color: #f9c941;
+  border-right: 2px solid;
+}
+th:first-child {
+  text-align: left;
+}
+th:last-child,
+th:nth-child(5) {
+  border-right: none;
+}
+td {
+  font-family: "Amatic SC", cursive;
+  vertical-align: middle;
+  padding: 0px 10px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 2px solid #56433d;
+  border-bottom: 2px solid #56433d;
+  border-right: 2px solid #56433d;
+}
+td > img {
+  width: 100px;
+  height: 150px;
+}
+td:first-child {
+  border-left: 2px solid #56433d;
+  border-right: none;
+}
+td:nth-child(2) {
+  text-align: left;
+}
+.admin-text {
+  font-family: "Mr De Haviland", cursive;
+  font-size: 30px;
+  text-shadow: 1px 0px 0 #795548;
+  letter-spacing: 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+td a {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .admin-text {
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+  td:nth-child(2) {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin {
+    padding-top: 100px;
+  }
+  .admin-text {
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 0.5;
+  }
+  button.admin-btn {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+  .admin-btn a {
+    font-size: 30px;
+  }
+  td > img {
+    width: 80px;
+    height: 100px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 530px) {
+  table {
+    border-spacing: 0 6px;
+    width: 100%;
+  }
+  th {
+    padding: 4px 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+  .admin-btn a {
+    font-size: 28px;
+  }
+  .admin-text {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 0.5;
+  }
+  button.admin-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  td {
+    padding: 0px 4px;
+    font-size: 12px;
+  }
+  td > img {
+    width: 60px;
+    height: 80px;
+  }
+}

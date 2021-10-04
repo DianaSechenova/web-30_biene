@@ -1,0 +1,112 @@
+$grey-collor: rgb(220, 216, 204);
+$yellow-collor: rgb(233, 203, 117);
+$bg-collor: rgb(255, 249, 231);
+$inner-margin: 200px;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: url("../images/body-bg.png") rgb(255, 250, 237) fixed;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: rgb(39, 39, 37);
+}
+p,
+ul,
+li,
+a,
+h1,
+body,
+main {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+.btn {
+  text-align: center;
+  background-color: $grey-collor;
+  border-radius: 3px;
+  font-family: "Amatic SC";
+  cursor: pointer;
+  border: none;
+}
+.base-size-content {
+  width: 80vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.shadow {
+  text-shadow: 3px -2px 0 #fff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fuggles&family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap");
+.cursive {
+  font-family: "Mr De Haviland", cursive;
+}
+.great {
+  font-family: "Amatic SC", cursive;
+}
+.bg-yellow {
+  background-color: rgb(233, 203, 117, 0.6);
+  border-radius: 5px;
+  padding: 14px;
+  box-shadow: 0px 0px 10px $grey-collor;
+}
+/////____________________pagination
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 20px auto;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: black;
+  background-color: $bg-collor;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.pagination li:first-child a {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+ul.pagination li a.active {
+  background-color: $yellow-collor;
+  color: white;
+  border: 1px solid $yellow-collor;
+}
+
+ul.pagination li a:hover:not(.active) {
+  background-color: $grey-collor;
+}
+@media (max-width: 375px) {
+  ul.pagination li a {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}

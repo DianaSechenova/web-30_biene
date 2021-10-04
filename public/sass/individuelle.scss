@@ -1,0 +1,72 @@
+@import "admin";
+
+.individuelle-wrapp {
+  padding-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+section:first-child {
+  width: 40%;
+  font-family: "Amatic SC", cursive;
+  text-transform: capitalize;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 0px -1px 0 #000;
+  align-items: center;
+}
+section:last-child {
+  width: 50%;
+}
+label {
+  font-family: "Amatic SC", cursive;
+  text-transform: capitalize;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: $bg-collor;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px $grey-collor;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Amatic SC", cursive;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 3px 10px 10px 0 rgba(black, 0.3);
+  font-size: 26px;
+}
+input[type="submit"]:hover {
+  transform: scale(1.1);
+  box-shadow: 0 22px 44px 0 rgba(#fff, 0.3);
+  text-shadow: 1px -1px 0 #fff;
+  transition: 1s;
+}
+.scroll {
+  background-color: $yellow-collor;
+  padding: 10px;
+  height: 50px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+td {
+  font-size: 20px;
+}

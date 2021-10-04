@@ -1,0 +1,645 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fuggles&family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap");
+/*база*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/body-bg.png") #fffaed fixed;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #272725;
+}
+
+p,
+ul,
+li,
+a,
+h1,
+body,
+main {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.btn {
+  text-align: center;
+  background-color: #dcd8cc;
+  border-radius: 3px;
+  font-family: "Amatic SC";
+  cursor: pointer;
+  border: none;
+}
+
+.base-size-content {
+  width: 80vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.shadow {
+  text-shadow: 3px -2px 0 #fff;
+}
+
+.cursive {
+  font-family: "Mr De Haviland", cursive;
+}
+
+.great {
+  font-family: "Amatic SC", cursive;
+}
+
+.bg-yellow {
+  background-color: rgba(233, 203, 117, 0.6);
+  border-radius: 5px;
+  padding: 14px;
+  box-shadow: 0px 0px 10px #dcd8cc;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 20px auto;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: black;
+  background-color: #fff9e7;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.pagination li:first-child a {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+ul.pagination li a.active {
+  background-color: #e9cb75;
+  color: white;
+  border: 1px solid #e9cb75;
+}
+
+ul.pagination li a:hover:not(.active) {
+  background-color: #dcd8cc;
+}
+
+@media (max-width: 375px) {
+  ul.pagination li a {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
+/*база*/
+/*header*/
+.header {
+  background-color: #fff9e7;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  top: 0;
+  z-index: 50;
+}
+.header_body {
+  position: relative;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.header_list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.header_list li {
+  margin: 0px 0px 0px 30px;
+  box-shadow: 3px 10px 10px 0 rgba(0, 0, 0, 0.3);
+  height: 50px;
+  width: 170px;
+  text-align: center;
+  background-color: #dcd8cc;
+  border-radius: 3px;
+  font-family: "Amatic SC";
+  cursor: pointer;
+  border: none;
+}
+.header_link {
+  font-size: 43px;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+.header_logo {
+  position: relative;
+  z-index: 3;
+  flex: 0 0 65px;
+}
+.header_logo img {
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff9e7;
+  z-index: 2;
+}
+
+._link {
+  font-size: 19px;
+}
+
+.header_list li:hover {
+  transform: scale(1.2);
+  box-shadow: 0 22px 44px 0 rgba(255, 255, 255, 0.3);
+  text-shadow: 1px -1px 0 #fff;
+  transition: 1s;
+}
+/*header*/
+/*footer*/
+
+.footer {
+  background-color: #dcd8cc;
+  height: 150px;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.info {
+  width: 50%;
+  align-self: center;
+  padding-left: 5vw;
+}
+
+.info > a {
+  position: relative;
+  top: 0;
+  font-family: "Mr De Haviland", cursive;
+  color: #fff9e7;
+  text-shadow: 3px -1px 1px #000;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.info > a::after {
+  content: "";
+  border-bottom: 1px solid #000;
+  box-shadow: 2px 2px 0 #fff;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+}
+
+.item-footer {
+  width: 34%;
+  height: 75px;
+  text-align: center;
+  padding-top: 20px;
+  font-family: "Fuggles", cursive;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Amatic SC", cursive;
+  font-size: 46px;
+}
+
+.wrapp-circle {
+  background-color: #e9cb75;
+  border: 1px #8f7c4b solid;
+  border-radius: 50px;
+  color: #64593d;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+/*footer*/
+/*header,footer media*/
+@media (max-width: 1024px) {
+  .header_list li {
+    height: 39px;
+    width: 100px;
+  }
+
+  .header_link {
+    font-size: 27px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  ._link {
+    font-size: 17px;
+  }
+}
+.header_burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body.log {
+    overflow-y: hidden;
+  }
+
+  .header_body {
+    height: 50px;
+  }
+
+  .header_logo {
+    flex: 0 0 40px;
+  }
+
+  .header_burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .header_burger::before,
+.header_burger::after {
+    content: "";
+    background-color: #dcd8cc;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header_burger span {
+    position: absolute;
+    background-color: #dcd8cc;
+    top: 9px;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header_burger::before {
+    top: 0;
+  }
+
+  .header_burger::after {
+    bottom: 0;
+  }
+
+  .header_burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .header_burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header_burger.active span {
+    transform: scale(0);
+  }
+
+  .header_menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #dcd8cc;
+    padding: 70px 10px 20px 10px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header_menu.active {
+    top: 0;
+  }
+
+  .header_list {
+    display: block;
+  }
+
+  .header_list li {
+    margin: 0px 20px 20px 0px;
+  }
+
+  .links.links-active {
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    box-shadow: none;
+    text-shadow: 3px -2px 0 #fff;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid oldlace;
+  }
+
+  .footer {
+    height: 60px;
+  }
+
+  .links {
+    font-size: 20px;
+  }
+
+  .wrapp-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .info a {
+    font-size: 24px;
+    text-shadow: 2px -1px 0 #fff;
+  }
+
+  .info > a::after {
+    box-shadow: 1px 1px 0 #fff;
+    width: 70px;
+  }
+}
+/*header,footer media*/
+/*admin*/
+.admin {
+  padding-top: 150px;
+}
+
+.admin-btn {
+  box-shadow: 3px 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+._a {
+  margin: 0px 30px 30px 30px;
+}
+
+section.admin-btn a {
+  padding: 10px 0px;
+  font-size: 40px;
+}
+
+button.admin-btn {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.admin-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 22px 44px 0 rgba(255, 255, 255, 0.3);
+  text-shadow: 1px -1px 0 #fff;
+  transition: 1s;
+}
+
+table {
+  border-spacing: 0 10px;
+  width: 100%;
+}
+
+tbody {
+  background-color: #fff9e7;
+}
+
+th {
+  padding: 10px 20px;
+  font-family: "Mr De Haviland", cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  background: #56433d;
+  color: #f9c941;
+  border-right: 2px solid;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+th:last-child,
+th:nth-child(5) {
+  border-right: none;
+}
+
+td {
+  font-family: "Amatic SC", cursive;
+  vertical-align: middle;
+  padding: 0px 10px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 2px solid #56433d;
+  border-bottom: 2px solid #56433d;
+  border-right: 2px solid #56433d;
+}
+
+td > img {
+  width: 100px;
+  height: 150px;
+}
+
+td:first-child {
+  border-left: 2px solid #56433d;
+  border-right: none;
+}
+
+td:nth-child(2) {
+  text-align: left;
+}
+
+.admin-text {
+  font-family: "Mr De Haviland", cursive;
+  font-size: 30px;
+  text-shadow: 1px 0px 0 #795548;
+  letter-spacing: 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+td a {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .admin-text {
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+
+  td:nth-child(2) {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .admin {
+    padding-top: 100px;
+  }
+
+  .admin-text {
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 0.5;
+  }
+
+  button.admin-btn {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+
+  .admin-btn a {
+    font-size: 30px;
+  }
+
+  td > img {
+    width: 80px;
+    height: 100px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 530px) {
+  table {
+    border-spacing: 0 6px;
+    width: 100%;
+  }
+
+  th {
+    padding: 4px 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+
+  .admin-btn a {
+    font-size: 28px;
+  }
+
+  .admin-text {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 0.5;
+  }
+
+  button.admin-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  td {
+    padding: 0px 4px;
+    font-size: 12px;
+  }
+
+  td > img {
+    width: 60px;
+    height: 80px;
+  }
+}
+/*admin*/
+/*individuelle*/
+.individuelle-wrapp {
+  padding-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+section:first-child {
+  width: 40%;
+  font-family: "Amatic SC", cursive;
+  text-transform: capitalize;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 0px -1px 0 #000;
+  align-items: center;
+}
+
+section:last-child {
+  width: 50%;
+}
+
+label {
+  font-family: "Amatic SC", cursive;
+  text-transform: capitalize;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #fff9e7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #dcd8cc;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Amatic SC", cursive;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 3px 10px 10px 0 rgba(0, 0, 0, 0.3);
+  font-size: 26px;
+}
+
+input[type=submit]:hover {
+  transform: scale(1.1);
+  box-shadow: 0 22px 44px 0 rgba(255, 255, 255, 0.3);
+  text-shadow: 1px -1px 0 #fff;
+  transition: 1s;
+}
+/*individuelle*/
+
+/*# sourceMappingURL=individuelle.css.map */
